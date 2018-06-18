@@ -47,6 +47,14 @@ app.get('/about', (req,res) =>{
     papgeTitle:'About Page',
   });
 });
+
+app.get('/projects', (req,res) =>{
+  res.render('projects.hbs',{
+    papgeTitle:'Projects Page',
+    welcomeMessage: 'Projects'
+  });
+});
+
 app.get('/', (req,res) =>{
   res.render('home.hbs',{
     papgeTitle:'Home Page',
