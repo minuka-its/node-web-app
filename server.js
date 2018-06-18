@@ -3,6 +3,8 @@ const fs = require('fs');
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 1234;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -14,7 +16,7 @@ app.use((req,res,next)=>{
   var log = `Time:${now};  Request Method: ${req.method};   Request URL:${req.url}`;
 
   console.log(log);
-  fs.appendFile('server .log',log +'\n',(err)=>{
+  fs.appendFile('server.log',log +'\n',(err)=>{
     if (err) {
       console.log('Unnable to append to server log ATM');
     }
@@ -57,4 +59,4 @@ app.get('/bad' , (req,res)=>{
   });
 });
 
-app.listen(1234);
+app.listen(port);
