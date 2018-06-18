@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #4CAF50;
+  }
+  </style>
+</head>
+<body>
+{{>header}}
+<HR>
+
+<h1>{{screamIt welcomeMessage}}</h1>
+<HR>
+<H1>This is a {{papgeTitle}}</H1>
+
+Send me mail at <a href="mailto:minuka.weerathunga@itelasoft.com">
+
+  support@itelasoft.com</a>.
+
+  <P> This is a new paragraph!
+
+    <P> <B>This is a new paragraph!</B>
+
+      <BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
+
+      <HR>
+{{>footer}}
+
+    </body>
+    </html>
